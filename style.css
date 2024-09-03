@@ -1,0 +1,129 @@
+/* General Body Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414; /* Dark background color */
+    color: #e5e5e5; /* Light text color for contrast */
+}
+
+/* Navbar Styles */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #141414; /* Dark background for navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav.active {
+    background-color: #000; /* Darker background when scrolled */
+}
+
+.nav_logo {
+    height: 40px; /* Adjusted height for Netflix logo */
+}
+
+.nav_avatar {
+    position: absolute;  /* Allows you to position it freely */
+    right: 60px;         /* Adjust the horizontal position */
+    top: 20px;           /* Adjust the vertical position */
+    height: 30px;        /* Size of the smiley icon */
+    z-index: 1001;       /* Ensure it's on top */
+}
+
+
+
+/* Banner Styles */
+#banner {
+    position: relative;
+    height: 448px;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+}
+
+.banner_content {
+    position: absolute;
+    bottom: 80px;
+    left: 30px;
+    width: 50%;
+}
+
+.banner_title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.banner_buttons {
+    margin: 1rem 0;
+}
+
+.banner_button {
+    font-weight: 700;
+    color: #fff;
+    background-color: rgba(51, 51, 51, 0.5);
+    border: none;
+    padding: 0.5rem 2rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 0.2rem;
+}
+
+.banner_description {
+    width: 90%;
+    line-height: 1.3;
+    font-size: 0.9rem;
+    color: #fff;
+}
+
+.banner_fade-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.4rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+}
+
+/* Row Styles */
+#headrow {
+    padding: 20px;
+}
+
+.row {
+    margin-bottom: 30px;
+}
+
+.row_title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0 20px;
+}
+
+.row_posters {
+    display: flex;           /* Align posters horizontally */
+    overflow-x: auto;        /* Enable horizontal scrolling */
+    overflow-y: hidden;      /* Hide vertical scrollbar */
+    padding: 20px;
+    white-space: nowrap;     /* Prevent line breaks */
+}
+
+.row_posters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+}
+
+.row_posterLarge {
+    max-height: 250px;
+    object-fit: contain;
+    margin-right: 10px; /* Space between posters */
+    transition: transform 450ms;
+}
